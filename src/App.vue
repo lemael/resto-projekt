@@ -1,15 +1,15 @@
 <template>
-
-  <SignUp msg="Welcome to Your Vue.js App" />
+  <router-view />
 </template>
 
+
+
 <script>
-import SignUp from './components/SignUp.vue';
 
 export default {
   name: 'App',
   components: {
-    SignUp
+
   }
 }
 </script>
