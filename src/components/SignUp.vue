@@ -6,7 +6,9 @@
     <input type="text" v-model="email" placeholder="Enter Email">
     <input type="password" v-model="password" placeholder="Enter Password">
     <button v-on:click="signUp">Sign Up</button>
-
+    <p>
+        <router-link to="/login-page">Login</router-link>
+    </p>
   </div>
 </template>
 
@@ -17,6 +19,7 @@ export default {
   props: {
     msg: String
   },
+  //data() save the info von v-model
   data() {
     return {
       name: "",
@@ -54,28 +57,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.logo {
-  width: 100px;
-}
-
-.register input {
-  width: 300px;
-  height: 40px;
-  padding-left: 20px;
-  display: block;
-  margin-bottom: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  border: 1px solid skyblue;
-}
-
-.register button {
-  width: 320px;
-  height: 40px;
-  border: 1px solid skyblue;
-  background-color: skyblue;
-  color: #fff;
-  cursor: pointer;
-
-}
 </style>
