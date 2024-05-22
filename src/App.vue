@@ -31,7 +31,7 @@ body{
   width: 100px;
 }
 
-.register input, .login input {
+.register input, .login input , .add input{
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -42,11 +42,11 @@ body{
   border: 1px solid skyblue;
 }
 
-.register button, .login button {
+.register button, .login button, .add button {
   width: 320px;
   height: 40px;
-  border: 1px solid skyblue;
-  background-color: skyblue;
+  border: 1px solid #cd5c5c;
+  background-color: #cd5c5c;
   color: #fff;
   border-radius: 5px; 
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
