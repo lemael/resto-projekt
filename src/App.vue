@@ -48,8 +48,16 @@ body{
   border: 1px solid skyblue;
   background-color: skyblue;
   color: #fff;
+  border-radius: 5px; 
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
   cursor: pointer;
+  outline: none;
+  transition: 0.2s;
 
+}
+.register button:active, .login button:active{
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgb(0,0,0,0.24);
 }
 
 </style>
