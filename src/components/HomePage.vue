@@ -9,6 +9,7 @@
                     <th>Name</th>
                     <th>Contact</th>
                     <th>Address</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
 
@@ -22,6 +23,8 @@
                 <td> {{ item.contact }}</td>
 
                 <td> {{ item.address }}</td>
+                <td><router-link :to="{name:'Update', params:{ id: item.id}}">Update</router-link></td>
+                <!--   <td><router-link :to="'/update/' + item.id">Update</router-link></td>-->
             </tr>
 
         </table>
@@ -49,20 +52,22 @@ export default {
         this.user = JSON.parse(user);
         // const infoUser =JSON.parse(user)
 
-        console.warn(this.user)
-        console.warn(this.user[0])
-        console.warn(this.user[0].name)
-        this.nameUser = this.user[0].name
-        console.warn(this.nameUser)
+
 
 
         if (!user) {
             this.$router.push({ name: "SignUp" })
+        } else {
+            let result = await axios.get("http://localhost:3000/restaurants");
+            console.warn(result);
+            this.restaurants = result.data;
+            console.warn(this.restaurants);
+            console.warn(this.user)
+            // console.warn(this.user.name)
+            console.warn(this.user[0].name)
+            this.nameUser = this.user[0].name
+            console.warn(this.nameUser)
         }
-        let result = await axios.get("http://localhost:3000/restaurants");
-        console.warn(result);
-        this.restaurants = result.data;
-        console.warn(this.restaurants);
 
         // console.warn(result)
         //this.restaurants=result.data;
